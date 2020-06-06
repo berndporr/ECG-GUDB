@@ -51,12 +51,12 @@ The module is called `ecg_gudb_database`::
     from ecg_gudb_database import GUDb
 
 
-The constructor loads the ECG data of one subject and one experiment from github::
+The constructor loads the ECG data of one subject/experiment from github::
 
     ecg_class = GUDb(subject_number, experiment)
 
 where `subject_number` is from 0..24 and `experiment` is 'sitting', 'maths', 'walking', 'hand_bike' or 'jogging'.
-The array `ecg_class.experiments` contains these names so that one can loop through the different experiments.
+The array `ecg_class.experiments` is an array of all experiments so that one can loop through the different experiments.
 
 Retrieve the ECG data
 ---------------------
