@@ -16,8 +16,50 @@ The following channels were recorded with two [Attys](https://www.attys.tech/) r
    
 The cheststrap ECG allowed R peak detection even while jogging at a very high precision (+/- one sample). The sampling rate was 250Hz at a resolution of 24 bits. The database contains the unfiltered, DC-coupled signals as originally recorded. In order to be able to link the ECG artefacts to the behaviour of the subject all but one subject gave permission to be filmed and the videos are also part of the database.
 
+## Usage
+
+### Module
+```
+from ecg_gudb_database import GUDb
+```
+
+### Load the data into theh GuDb class (this contacts github and loads the data)
+```
+ecg_class = GUDb(subject_number, experiment)
+```
+where subject number is from 0..24 and experiment is 'sitting', 'maths', 'walking', 'hand_bike' or 'jogging'.
 
 
+### Retreive the ECG data
+The sampling rate is 250Hz for all experiments (`ecg_class.fs`).
+
+#### Einthoven
+```
+ecg_class.einthoven_I
+ecg_class.einthoven_II
+ecg_class.einthoven_III
+```
+
+#### Chest strap
+```
+chest_strap_V2_V1 = ecg_class.cs_V2_V1
+```
+
+#### R peak annotations
+
+The two boolean variables `ecg_class.anno_cs_exists` and `ecg_class.anno_cables_exists`
+tell the user if annotations exist. If yes they can be obtained.
+
+```
+if ecg_class.anno_cs_exists:
+    chest_strap_anno = ecg_class.anno_cs
+else:
+    print('No chest strap annotations')
+if ecg_class.anno_cables_exists:
+    cables_anno = ecg_class.anno_cables
+else:
+    print("No cables annotations")
+```
 
 
 ## Videos
