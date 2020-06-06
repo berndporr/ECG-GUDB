@@ -5,6 +5,8 @@ High precision ECG Database with annotated R peaks, recorded and filmed under re
 This is an API which provides transparent online access to the ECG GUDB
 http://researchdata.gla.ac.uk/716/ without the need of downloading it.
 
+DOI: 10.5525/gla.researchdata.716 / http://dx.doi.org/10.5525/gla.researchdata.716
+
 It contains ECGs from 25 subjects. Each subject was recorded performing 5 different tasks for two minutes:
    * sitting
    * a maths test on a tablet
