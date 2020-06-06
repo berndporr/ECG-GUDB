@@ -5,7 +5,7 @@ High precision ECG Database with annotated R peaks, recorded and filmed under re
 This is an API which provides transparent online access to the ECG GUDB
 http://researchdata.gla.ac.uk/716/ without the need of downloading it.
 
-DOI: 10.5525/gla.researchdata.716 / http://dx.doi.org/10.5525/gla.researchdata.716
+DOI: 10.5525/gla.researchdata.716 -- http://dx.doi.org/10.5525/gla.researchdata.716
 
 It contains ECGs from 25 subjects. Each subject was recorded performing 5 different tasks for two minutes:
    * sitting
@@ -60,6 +60,8 @@ The constructor loads the ECG data of one subject/experiment from github::
 where `subject_number` is from 0..24 and `experiment` is 'sitting', 'maths', 'walking', 'hand_bike' or 'jogging'.
 The array `ecg_class.experiments` is an array of all experiments so that one can loop through the different experiments.
 
+
+
 Retrieve the ECG data
 ---------------------
 
@@ -80,6 +82,7 @@ Chest strap::
 where the filtered versions have 50Hz mains and DC removed.
 
 
+
 R peak annotations
 ------------------
 
@@ -98,10 +101,11 @@ tell the user if annotations exist. If yes they can be obtained::
 
 
 
-Videos
-======
+Videos and full dataset for offline usage
+=========================================
 
 Where the participant has consented, there is a video for each of the tasks.
-The video and ECG data have been synchronised so they start and end at the same time. The videos can be requested here:
+The video and ECG data have been synchronised so they start and end at the same time. The full dataset with the
+videos can be requested here:
 
 http://researchdata.gla.ac.uk/716/
