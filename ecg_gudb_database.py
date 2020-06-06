@@ -28,7 +28,7 @@ class GUDb:
         return c
     
     def __init__(self,_subj,_experiment):
-        """ Constructor: Specify the path to the data, the subject number and the experiment"""
+        """ Constructor: Specify the subject number and the experiment"""
         self.subj = _subj
         self.experiment = _experiment
         self.subjdir = self.url+"/"+("subject_%02d" % _subj)+"/"

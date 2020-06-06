@@ -100,6 +100,15 @@ tell the user if annotations exist. If yes they can be obtained::
         print("No cables annotations")
 
 
+Accelerometer data
+------------------
+
+The accelerometer was worn on a standard belt around the subject's waist::
+
+    ecg_class.acc_x
+    ecg_class.acc_y
+    ecg_class.acc_z
+
 
 Videos and full dataset for offline use
 =======================================

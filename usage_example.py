@@ -15,13 +15,21 @@ import numpy as np
 
 
 #function for plotting ecg data, annotations are optional
-def plot_data(axs, t, data, anno = []):
+def plot_ecg(axs, t, data, anno = []):
 
     axs.plot(t, data)
     if len(anno)>0:
         axs.plot(t[anno], data[anno], 'ro')
     
     axs.set_ylabel('Chest ECG/V')
+    axs.set_xlabel('Time (s)')
+
+    
+#function for plotting acc data
+def plot_acc(axs, t, x,y,z):
+
+    axs.plot(t,x, t,y, t,z)
+    axs.set_ylabel('Acceleration m/s2^2')
     axs.set_xlabel('Time (s)')
 
     
@@ -76,15 +84,18 @@ if ecg_class.anno_cables_exists:
 else:
     print("No cables annotations")
 
-fig, axs = plt.subplots(2, 1)
+fig, axs = plt.subplots(3, 1)
 
 fig.suptitle('Subject %02d: %s' % (subject_number, experiment))
     
 #plotting the chest strap data with annotations
-plot_data(axs[0],ecg_class.t, chest_strap_V2_V1, anno=chest_strap_anno)
+plot_ecg(axs[0],ecg_class.t, chest_strap_V2_V1, anno=chest_strap_anno)
 
 #if we have R peak annotations then let's plot the heartrate
 if ecg_class.anno_cs_exists:
     plot_hr(axs[1],ecg_class.fs,chest_strap_anno)
+
+plot_acc(axs[2],ecg_class.t,ecg_class.acc_x,ecg_class.acc_y,ecg_class.acc_z)
+
 
 plt.show()
