@@ -23,15 +23,18 @@ The cheststrap ECG allowed R peak detection even while jogging at a very high pr
 from ecg_gudb_database import GUDb
 ```
 
-### Load the data into theh GuDb class (this contacts github and loads the data)
+### Load the data into the GuDb class
+
+The constructor loads the ECG data of one subject and one experiment from github
 ```
 ecg_class = GUDb(subject_number, experiment)
 ```
-where subject number is from 0..24 and experiment is 'sitting', 'maths', 'walking', 'hand_bike' or 'jogging'.
+where `subject_number` is from 0..24 and `experiment` is 'sitting', 'maths', 'walking', 'hand_bike' or 'jogging'.
 
 
-### Retreive the ECG data
-The sampling rate is 250Hz for all experiments (`ecg_class.fs`).
+### Retrieve the ECG data
+The data is available as numpy arrays. The sampling rate is 250Hz for all experiments (`ecg_class.fs`).
+we have recorded Einthoven and from a chest strap.
 
 #### Einthoven
 ```
@@ -64,6 +67,7 @@ else:
 
 ## Videos
 
-Where the participant has consented, there is a video for each of the tasks. The video and ECG data have been synchronised so they start and end at the same time. The videos can be requested here:
+Where the participant has consented, there is a video for each of the tasks.
+The video and ECG data have been synchronised so they start and end at the same time. The videos can be requested here:
 
 http://researchdata.gla.ac.uk/716/

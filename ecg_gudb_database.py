@@ -39,11 +39,13 @@ class GUDb:
             self.anno_cs=self.loadDataFromURL(self.expdir+"annotation_cs.tsv").astype(int)
             self.anno_cs_exists=True 
         except:
+            self.anno_cs=False
             self.anno_cs_exists=False           
         try:
             self.anno_cables=self.loadDataFromURL(self.expdir+"annotation_cables.tsv").astype(int)
             self.anno_cables_exists=True 
         except:
+            self.anno_cables=False
             self.anno_cables_exists=False   
 
         self.cs_V2_V1 = self.data[:, 0]
