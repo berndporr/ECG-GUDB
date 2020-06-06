@@ -10,7 +10,6 @@ Example how to use the API
 
 from ecg_gudb_database import GUDb
 import matplotlib.pyplot as plt
-import pathlib
 import numpy as np
 
 
