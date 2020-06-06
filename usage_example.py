@@ -84,18 +84,22 @@ if ecg_class.anno_cables_exists:
 else:
     print("No cables annotations")
 
-fig, axs = plt.subplots(3, 1)
+fig, axs = plt.subplots(4, 1)
 
 fig.suptitle('Subject %02d: %s' % (subject_number, experiment))
-    
+
+axs[0].plot(ecg_class.t, einthoven_ii_filt)
+axs[0].set_ylabel('Einthoven II/V')
+axs[0].set_xlabel('Time (s)')
+
 #plotting the chest strap data with annotations
-plot_ecg(axs[0],ecg_class.t, chest_strap_V2_V1, anno=chest_strap_anno)
+plot_ecg(axs[1],ecg_class.t, chest_strap_V2_V1, anno=chest_strap_anno)
 
 #if we have R peak annotations then let's plot the heartrate
 if ecg_class.anno_cs_exists:
-    plot_hr(axs[1],ecg_class.fs,chest_strap_anno)
+    plot_hr(axs[2],ecg_class.fs,chest_strap_anno)
 
-plot_acc(axs[2],ecg_class.t,ecg_class.acc_x,ecg_class.acc_y,ecg_class.acc_z)
+plot_acc(axs[3],ecg_class.t,ecg_class.acc_x,ecg_class.acc_y,ecg_class.acc_z)
 
 
 plt.show()
