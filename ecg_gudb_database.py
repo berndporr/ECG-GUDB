@@ -20,18 +20,20 @@ class GUDb:
     experiments = ["sitting","maths","walking","hand_bike","jogging"]
     fs=250
     total_subjects = 25
-    url = "https://berndporr.github.io/ECG-GUDB/experiment_data"
 
     def loadDataFromURL(self,url):
-        s=requests.get(url).content
-        c=np.loadtxt(io.StringIO(s.decode('utf-8')))
-        return c
+        if ("http:" in url) or ("https:" in url):
+            s=requests.get(url).content
+            c=np.loadtxt(io.StringIO(s.decode('utf-8')))
+            return c
+        else:
+            return np.loadtxt(url)
     
-    def __init__(self,_subj,_experiment):
-        """ Constructor: Specify the subject number and the experiment"""
+    def __init__(self,_subj,_experiment,url = "https://berndporr.github.io/ECG-GUDB/experiment_data"):
+        """Specify the subject number and the experiment. Optional parameter url: different url or local path."""
         self.subj = _subj
         self.experiment = _experiment
-        self.subjdir = self.url+"/"+("subject_%02d" % _subj)+"/"
+        self.subjdir = url+"/"+("subject_%02d" % _subj)+"/"
         self.expdir = self.subjdir+self.experiment+"/"
 
         self.data=self.loadDataFromURL(self.expdir+"ECG.tsv")

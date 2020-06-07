@@ -59,7 +59,6 @@ experiment = 'jogging'
 # creating class which loads the experiment
 ecg_class = GUDb(subject_number, experiment)
 
-
 #getting the raw ECG data numpy arrays from class
 chest_strap_V2_V1 = ecg_class.cs_V2_V1
 einthoven_i = ecg_class.einthoven_I

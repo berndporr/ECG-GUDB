@@ -60,6 +60,10 @@ The constructor loads the ECG data of one subject/experiment from github::
 where `subject_number` is from 0..24 and `experiment` is 'sitting', 'maths', 'walking', 'hand_bike' or 'jogging'.
 The array `ecg_class.experiments` is an array of all experiments so that one can loop through the different experiments.
 
+Optionally, in case you decide later to download the whole dataset from http://researchdata.gla.ac.uk/716/ then
+specify the absolute path to the dataset with the optional parameter url without the "file:" specifier::
+
+    ecg_class = GUDb(subject_number, experiment, url = "/home/bp1/dataset_dataset_716/experiment_data/")
 
 
 Retrieve the ECG data
