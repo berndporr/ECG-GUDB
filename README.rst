@@ -113,8 +113,10 @@ The accelerometer was worn on a standard belt around the subject's waist::
 Videos and full dataset for offline use
 =======================================
 
-Where the participant has consented, there is a video for each of the tasks.
+Where the participant has consented, there is a video for each of the tasks. Here is an example: 
+https://berndporr.github.io/ECG-GUDB/
 The video and ECG data have been synchronised so they start and end at the same time. The full dataset with the
 videos can be requested here:
 
 http://researchdata.gla.ac.uk/716/
+
