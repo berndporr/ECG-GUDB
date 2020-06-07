@@ -7,7 +7,7 @@ with open('README.rst') as f:
 
 setup(
     name='ecg_gudb_database',
-    version='1.0.2',
+    version='1.0.3',
     description="API for a high precision ECG Database with annotated R peaks (GUDB)",
     long_description=long_description,
     long_description_content_type='text/x-rst',
