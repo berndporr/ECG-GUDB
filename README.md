@@ -95,22 +95,17 @@ where the filtered versions have 50Hz mains and DC removed.
 #### R peak annotations
 
 The two boolean variables `ecg_class.anno_cs_exists` and `ecg_class.anno_cables_exists`
-tell the user if annotations exist. If yes they can be obtained::
+tell the user if annotations exist. If yes they can be obtained.
 
 ```
-    if ecg_class.anno_cs_exists:
-        chest_strap_anno = ecg_class.anno_cs
-    else:
-        print('No chest strap annotations')
-    if ecg_class.anno_cables_exists:
-        cables_anno = ecg_class.anno_cables
-    else:
-        print("No cables annotations")
+ecg_class.anno_cs
+ecg_class.anno_cables
 ```
 
 #### Accelerometer data
 
-The accelerometer was worn on a standard belt around the subject's waist::
+The accelerometer was worn on a standard belt around the subject's waist.
+
 ```
 ecg_class.acc_x
 ecg_class.acc_y

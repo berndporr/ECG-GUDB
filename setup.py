@@ -10,6 +10,7 @@ setup(
     version='1.0.4',
     description="API for a high precision ECG Database with annotated R peaks (GUDB)",
     long_description=long_description,
+    long_description_content_type="text/markdown",
     author='Bernd Porr',
     author_email='bernd.porr@glasgow.ac.uk',
     py_modules=['ecg_gudb_database'],
