@@ -2,15 +2,14 @@
 
 from setuptools import setup
 
-with open('README.rst') as f:
+with open('README.md') as f:
     long_description = f.read()
 
 setup(
     name='ecg_gudb_database',
-    version='1.0.3',
+    version='1.0.4',
     description="API for a high precision ECG Database with annotated R peaks (GUDB)",
     long_description=long_description,
-    long_description_content_type='text/x-rst',
     author='Bernd Porr',
     author_email='bernd.porr@glasgow.ac.uk',
     py_modules=['ecg_gudb_database'],
