@@ -1,9 +1,10 @@
 # High precision ECG Database with annotated R peaks, recorded and filmed under realistic conditions
 
-This is an API which provides transparent online access to the ECG GUDB
-http://researchdata.gla.ac.uk/716/ without the need of downloading it.
+This is a mirror of the ECG GUDB
+http://researchdata.gla.ac.uk/716/ and provides online access via
+a python API.
 
-DOI: 10.5525/gla.researchdata.716
+DOI: https://doi.org/10.5281/zenodo.10925419
 
 ![Example of a dataset](https://berndporr.github.io/ECG-GUDB/dataplot.jpg)
 
