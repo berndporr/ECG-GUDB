@@ -1,4 +1,4 @@
-# High precision ECG Database with annotated R peaks, recorded and filmed under realistic conditions
+# High precision ECG Database with annotated QRS complexes
 
 This is a mirror of the ECG GUDB
 http://researchdata.gla.ac.uk/716/ and provides online access via
